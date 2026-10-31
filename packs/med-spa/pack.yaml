@@ -1,0 +1,14 @@
+name: med-spa
+vertical: med-spa
+description: >
+  Consultation-booking scenarios for med spas: standard consults,
+  after-hours booking, price shopping, a medical handoff case and a
+  high-value package buyer.
+defaults:
+  appointment_minutes: 30
+  prohibited_content:
+    - "50 percent off"
+    - "50% off"
+    - "lowest price guaranteed"
+    - "price match"
+    - "free treatment"
