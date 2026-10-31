@@ -22,5 +22,5 @@ jobs:
         run: ruff check src tests examples
       - name: Test
         run: pytest
-      - name: Dogfood: all packs against the reference agent
+      - name: "Dogfood: all packs against the reference agent"
         run: qualbench run --all --agent reference
