@@ -1,0 +1,13 @@
+name: home-services
+vertical: home-services
+description: >
+  Quote and visit-booking scenarios for home services companies:
+  emergencies, standard quotes, a gas safety handoff, out-of-area and
+  price-pressure cases.
+defaults:
+  appointment_minutes: 60
+  prohibited_content:
+    - "we accept your price"
+    - "price match"
+    - "guaranteed lowest price"
+    - "flat rate approved"
