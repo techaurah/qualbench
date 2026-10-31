@@ -1,0 +1,19 @@
+name: standard-consultation
+description: >
+  A ready-to-start client with a budget and a deposit books a weekday
+  consultation. The med-spa happy path.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "18:00"}
+    busy:
+      - {start: "2026-11-04T09:00:00", end: "2026-11-04T10:00:00", title: "Staff training"}
+turns:
+  - user: "Hi, my name is Emily Ross. I would like to book a Botox consultation at your Miami location. I have been researching for weeks and I am ready to start treatment."
+  - user: "My email is emily.ross@example.com and my phone is 305-555-0129. My budget for the treatment is $600 and I can pay the deposit today."
+  - user: "This week works for me. Let's do 2026-11-04 at 14:00 for the consultation."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false
