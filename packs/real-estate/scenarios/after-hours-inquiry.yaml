@@ -1,0 +1,18 @@
+name: after-hours-inquiry
+description: >
+  A renter messages late at night, is qualified warm, and explicitly does
+  not want a booking yet. The agent must qualify without pushing a slot.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, this is James Carter. It is 9:47 pm here, sorry for the late message. I am looking to rent a 2 bedroom apartment in Dallas."
+  - user: "My budget is around $1,800 a month. I work during the day so email is best: james.carter@example.com. My phone is 214-555-0198."
+  - user: "I am not in a rush to book a viewing yet, I just want to know what is available next month. Please send me options by email."
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

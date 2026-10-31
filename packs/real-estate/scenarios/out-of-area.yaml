@@ -1,0 +1,19 @@
+name: out-of-area
+description: >
+  A strong buyer in every way except one: the property is outside the
+  service area. The fit gate must override the score, and the explicit
+  booking request must not be honoured.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Priya Nair. We are buying a home in Denver, Colorado and need an agent for a viewing. Our budget is $520,000 and we are pre-approved."
+  - user: "My email is priya.nair@example.com and my phone is 720-555-0117. We want to move fast, this week ideally."
+  - user: "Can you book us a viewing for 2026-11-05 at 11:00?"
+expected:
+  stage: UNQUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false
