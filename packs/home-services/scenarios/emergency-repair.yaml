@@ -1,0 +1,19 @@
+name: emergency-repair
+description: >
+  A burst pipe, cash in hand, same-day booking. The highest-urgency
+  home-services path, and it must end in a valid same-day slot.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy:
+      - {start: "2026-11-02T08:00:00", end: "2026-11-02T09:00:00", title: "Morning depot run"}
+turns:
+  - user: "This is Mike Torres. We have a burst pipe flooding our kitchen in Phoenix and need a plumber today, it is an emergency."
+  - user: "My phone is 602-555-0171 and email is mike.torres@example.com. We have $1,500 set aside for repairs and we can pay cash, just please get someone out."
+  - user: "Today at 2026-11-02 13:00 works. Book the emergency visit."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

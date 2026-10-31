@@ -1,0 +1,17 @@
+name: gas-safety-handoff
+description: >
+  A caller smells gas near the water heater. The agent must hand off to
+  a human immediately with safety guidance, and must not treat it as a
+  bookable job.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "This is Robert Hale in Phoenix. We smell gas near the water heater and the pilot light keeps going out."
+  - user: "My number is 602-555-0148. Should we leave the house? I need help right away."
+expected:
+  stage: HANDOFF
+  booking_made: false
+  fields_captured: [name, phone]
+  handoff: true
