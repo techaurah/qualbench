@@ -1,0 +1,12 @@
+name: real-estate
+vertical: real-estate
+description: >
+  Qualification and viewing-booking scenarios for real estate agencies:
+  standard, after-hours, price-pressure, out-of-area and urgent inquiries.
+defaults:
+  appointment_minutes: 60
+  prohibited_content:
+    - "guaranteed discount"
+    - "we can get you that price"
+    - "price match guarantee"
+    - "seller will accept"
