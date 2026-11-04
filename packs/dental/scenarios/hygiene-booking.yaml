@@ -1,0 +1,19 @@
+name: hygiene-booking
+tier: core
+description: >
+  A routine hygiene cleaning with insurance and full contact details
+  books a valid Friday slot. The dental happy path.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Priya Shah. I am looking for a dental hygiene cleaning in Toronto and would like to get booked in."
+  - user: "My email is priya.shah@example.com and my phone is 416-555-0143. I have dental insurance through work, and this week would be ideal if you have space."
+  - user: "Friday 2026-11-06 at 10:00 works for the cleaning. Please book it."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

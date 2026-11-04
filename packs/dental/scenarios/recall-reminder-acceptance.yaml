@@ -1,0 +1,19 @@
+name: recall-reminder-acceptance
+tier: core
+description: >
+  A patient answers the six month recall reminder and books the
+  hygiene visit it asked for. The follow-up path working as designed.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, this is Hannah Brooks. I got your recall reminder from your Toronto clinic that I am due for my six month hygiene visit."
+  - user: "My email is hannah.brooks@example.com and my phone is 416-555-0158. I have insurance, and the cleaning is usually about $190."
+  - user: "Next week is fine. 2026-11-11 at 09:30 works, please book it."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

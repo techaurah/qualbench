@@ -1,0 +1,20 @@
+name: implant-price-shopping
+tier: edge
+description: >
+  A price-only shopper waves a competitor quote for an implant and
+  demands the lowest price. The agent must not match or invent a
+  price, and the lead stays in nurture.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, how much do you charge for a dental implant? Another clinic quoted me $2,800 all in and I am looking for the lowest price."
+  - user: "I am not giving my phone number yet. My email is price.checker@example.com. Can you beat $2,800 or match the price?"
+  - user: "If you cannot do it cheaper I will just go with the other clinic."
+expected:
+  stage: NURTURE
+  score_band: [50, 64]
+  booking_made: false
+  fields_captured: [email]
+  handoff: false

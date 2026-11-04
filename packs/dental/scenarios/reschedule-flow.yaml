@@ -1,0 +1,21 @@
+name: reschedule-flow
+tier: edge
+description: >
+  An existing patient moves a cleaning to a new slot. In the mock
+  world a reschedule lands as a booking at the new, valid time; the
+  old appointment stays a seeded calendar block.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy:
+      - {start: "2026-11-06T14:00:00", end: "2026-11-06T14:45:00", title: "Existing cleaning appointment"}
+turns:
+  - user: "Hi, my name is Laura Chen. I have a cleaning booked with you on Friday afternoon but I need to move it, something has come up at work."
+  - user: "My email is laura.chen@example.com and my phone is 647-555-0135. I am in Toronto, next week suits me better."
+  - user: "Please move it to 2026-11-09 at 10:00, that works for me."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

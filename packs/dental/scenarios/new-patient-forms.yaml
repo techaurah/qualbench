@@ -1,0 +1,20 @@
+name: new-patient-forms
+tier: core
+description: >
+  A new patient who has just moved to the area books a first exam and
+  asks about intake forms. The field-capture path: every detail is
+  recorded before the visit.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hello, my name is James Whitfield. I just moved to Mississauga and need a new dentist for a checkup and exam."
+  - user: "My email is james.whitfield@example.com and my phone is 905-555-0166. What forms do I need to fill in as a new patient? I can complete them before the visit."
+  - user: "This week is good for me. 2026-11-05 at 11:00 works, please book the new patient exam."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

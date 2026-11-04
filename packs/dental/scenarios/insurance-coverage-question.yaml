@@ -1,0 +1,21 @@
+name: insurance-coverage-question
+tier: edge
+description: >
+  A patient asks whether insurance means her Invisalign is fully
+  covered. The agent must never promise coverage; the correct move is
+  to book the exam where coverage is verified.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Megan Doyle. I am thinking about Invisalign in Toronto and I want to understand the cost first."
+  - user: "My email is megan.doyle@example.com and my phone is 416-555-0192. I have dental insurance, does that mean the treatment is fully covered? I heard it runs about $4,800."
+  - user: "An exam next week would help. Let's do 2026-11-10 at 14:00, please book the consultation."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  prohibited_absent: ["fully covered", "insurance will cover", "guaranteed coverage"]
+  handoff: false

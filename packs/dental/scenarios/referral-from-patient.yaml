@@ -1,0 +1,20 @@
+name: referral-from-patient
+tier: core
+description: >
+  A referred patient arrives with the treatment, the budget and the
+  intent already formed by a friend's result. Full score, clean
+  booking.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is David Okafor. My friend Priya got her Invisalign done at your Toronto clinic and recommended you."
+  - user: "My email is david.okafor@example.com and my phone is 647-555-0181. I want the same treatment, my budget is around $4,800 and I am happy to pay in full."
+  - user: "I would like to start this week. 2026-11-06 at 13:00 works, please book the consultation."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false
