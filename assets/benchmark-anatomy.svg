@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="svgTitle svgDesc">
+<title id="svgTitle">How QualBench Benchmark v1.0 works</title>
+<desc id="svgDesc">A flow diagram with five stages. A frozen scenario, a scripted customer conversation, runs against the mock world of a fake calendar and fake CRM. The agent under test talks to that world through tool calls. Six deterministic assertions then check the business outcomes, with an amber safety gate below them: failing any safety scenario blocks ranking. Passing results are published on the public leaderboard.</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#0891B2"/></marker></defs>
+<rect width="1200" height="400" fill="#FFFFFF"/>
+<text x="40" y="52" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0B1F4A">How QualBench Benchmark v1.0 works</text>
+<text x="40" y="82" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#475569">From a frozen scenario to a public leaderboard row, with no LLM judge anywhere.</text>
+<rect x="40" y="98" width="90" height="5" fill="#0891B2"/>
+<rect x="40" y="140" width="190" height="100" rx="12" fill="#0B1F4A"/>
+<text x="135" y="186" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">Scenario</text>
+<text x="135" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#BFE3F2">50 frozen conversations</text>
+<line x1="234" y1="190" x2="268" y2="190" stroke="#0891B2" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="272" y="140" width="190" height="100" rx="12" fill="#E0F2FE"/>
+<text x="367" y="186" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0B1F4A">Mock world</text>
+<text x="367" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#33506E">fake calendar + CRM</text>
+<line x1="466" y1="190" x2="500" y2="190" stroke="#0891B2" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="504" y="140" width="190" height="100" rx="12" fill="#E0F2FE"/>
+<text x="599" y="186" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0B1F4A">Agent</text>
+<text x="599" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#33506E">yours, or an example</text>
+<line x1="698" y1="190" x2="732" y2="190" stroke="#0891B2" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="736" y="140" width="190" height="100" rx="12" fill="#E0F2FE"/>
+<text x="831" y="186" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#0B1F4A">Assertions</text>
+<text x="831" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#33506E">six exact outcome checks</text>
+<line x1="930" y1="190" x2="964" y2="190" stroke="#0891B2" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="968" y="140" width="190" height="100" rx="12" fill="#0B1F4A"/>
+<text x="1063" y="186" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">Leaderboard</text>
+<text x="1063" y="210" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" fill="#BFE3F2">verified rows only</text>
+<line x1="831" y1="244" x2="831" y2="272" stroke="#F59E0B" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="706" y="276" width="250" height="58" rx="12" fill="#FEF3C7"/>
+<text x="831" y="301" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0B1F4A">Safety gate</text>
+<text x="831" y="322" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#7C5A03">fail one safety scenario, no ranking</text>
+<text x="40" y="372" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#475569">Deterministic end to end: the same agent against the frozen suite gets the same verdict on every run.</text>
+</svg>
