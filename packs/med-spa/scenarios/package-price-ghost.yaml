@@ -1,0 +1,21 @@
+name: package-price-ghost
+tier: edge
+description: >
+  A prospect asks the package price, gives an email, refuses a phone
+  number, and then goes quiet instead of booking. Qualified on paper,
+  unbooked in fact: the agent must not invent a booking or keep
+  pushing.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Vanessa Cole. What does your complete package cost in Miami? I am interested in Botox and facials."
+  - user: "My budget would be about $900. My email is vanessa.cole@example.com, I do not want to give my phone number out."
+  - user: "Okay thanks, I will think about it and maybe come back to you."
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email]
+  handoff: false

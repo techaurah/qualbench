@@ -1,0 +1,19 @@
+name: package-buyer
+tier: core
+description: >
+  A high-value client wants a full multi-treatment package, can pay in
+  full, and books the first session. Maximum intent.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hello, my name is Sofia Marino. I want the complete package at your Miami spa: Botox, filler, and a facial series. My budget is $1,200."
+  - user: "sofia.marino@example.com, 786-555-0137. I can pay in full at the first visit."
+  - user: "Let's start 2026-11-06 at 13:00. Book the first session please."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

@@ -1,0 +1,21 @@
+name: after-hours-booking
+tier: edge
+description: >
+  A client messages at 11:20 pm and books a Saturday facial using a gift
+  card. Warm score, real booking: the booking gate, not the band, decides
+  the stage.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "18:00"}
+    busy:
+      - {start: "2026-11-07T09:00:00", end: "2026-11-07T10:00:00", title: "Fully booked class"}
+turns:
+  - user: "Hi, it is 11:20 pm, sorry for the late message. This is Anna Kim. Do you have any Saturday appointments in Orlando for a facial? I keep meaning to book one."
+  - user: "My email is anna.kim@example.com and my phone is 407-555-0184. I have a $200 gift card I want to use toward it."
+  - user: "Saturday 2026-11-07 at 11:00 works for me. Please book it."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

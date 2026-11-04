@@ -1,0 +1,20 @@
+name: gift-card-buyer
+tier: core
+description: >
+  A buyer purchases a gift card for someone else. No appointment is
+  needed: capture the buyer, qualify the purchase, and close
+  politely without inventing a booking.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Laura Mitchell. I want to buy a gift card for my sister, she loves your Miami spa facials."
+  - user: "The gift card would be $150. My email is laura.mitchell@example.com and my phone is 305-555-0114."
+  - user: "Her birthday is this week, so if you can email me the purchase link I will buy it right away."
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false
