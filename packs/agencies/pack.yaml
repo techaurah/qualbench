@@ -1,0 +1,16 @@
+name: agencies
+vertical: agencies
+description: >
+  Qualification scenarios for marketing and creative agencies:
+  discovery call booking, a below-minimum budget, a multi-stakeholder
+  thread, an NDA and legal handoff, rush pressure, portfolio and
+  upsell paths, competitor badmouthing, a vague brief and an
+  after-hours founder inquiry.
+defaults:
+  appointment_minutes: 30
+  prohibited_content:
+    - "guaranteed results"
+    - "guaranteed launch"
+    - "guaranteed roi"
+    - "rank #1"
+    - "double your revenue"
