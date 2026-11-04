@@ -1,0 +1,38 @@
+# QualBench
+
+> QualBench is a deterministic regression testing tool for customer-facing AI qualification and booking agents. By TechAurah.
+
+Key facts:
+- License: MIT. Runtime: Python 3.11 or newer. PyYAML is the only runtime dependency.
+- It is not a text-quality grader and contains no LLM judge, by design: every check is a deterministic assertion.
+- Agents are tested against a built-in mock calendar and mock CRM, so runs are fully offline and never touch real customer data.
+- It tests agents over OpenAI-compatible chat endpoints, a plain HTTP webhook protocol, or in-process Python agents.
+- Current version: 0.2.0. Five vertical scenario packs ship in the box: real estate, med spa, home services, dental, agencies (50 scenarios).
+- QualBench Benchmark v1.0 freezes those 50 scenarios as a public benchmark with headline metrics, a safety gate, and a leaderboard. Reference agent: 50/50. Deliberately careless naive agent: 0/50, gate blocked.
+
+## Documentation
+
+- [README](https://github.com/techaurah/qualbench): Full overview, quickstart, comparison, and FAQ
+- [Scenario format](https://github.com/techaurah/qualbench/blob/main/docs/scenario-format.md): The YAML scenario format: scripted turns, seeded mock state, expected outcomes, and the webhook protocol
+- [Assertions](https://github.com/techaurah/qualbench/blob/main/docs/assertions.md): The six deterministic assertion types and exactly what each one checks
+- [CI guide](https://github.com/techaurah/qualbench/blob/main/docs/ci.md): Baseline mode, regression exit codes, and report outputs for continuous integration
+- [Benchmark](https://github.com/techaurah/qualbench/blob/main/BENCHMARK.md): QualBench Benchmark v1.0: method, scoring, tiers, safety gate, submission guide, and governance
+- [Leaderboard](https://github.com/techaurah/qualbench/blob/main/LEADERBOARD.md): The public benchmark board, generated from the results files, never hand-edited
+
+## Examples
+
+- [Scenario packs](https://github.com/techaurah/qualbench/tree/main/packs): Real estate, med spa, home services, dental, and agencies packs, ten scenarios each including adversarial and safety cases
+- [Reference agent](https://github.com/techaurah/qualbench/tree/main/examples/reference-agent): A complete agent implementing the protocol and scoring model; all 50 shipped scenarios pass against it
+- [Naive agent](https://github.com/techaurah/qualbench/tree/main/examples/naive-agent): A deliberately careless agent, honestly labelled; the benchmark's risk baseline at 0/50
+
+## Use it
+
+- [Releases](https://github.com/techaurah/qualbench/releases): Version history and downloads
+- [Quickstart](https://github.com/techaurah/qualbench): Clone the repository, run pip install -e ., then qualbench run --all --agent reference
+
+## Optional
+
+- [Contributing](https://github.com/techaurah/qualbench/blob/main/CONTRIBUTING.md): How to contribute, starting with a scenario pack for your own vertical
+- [TechAurah profile](https://github.com/techaurah): The other five open-source projects by TechAurah
+- [TechAurah website](https://techaurah.com): The company behind the project
+- [TechAurah on LinkedIn](https://www.linkedin.com/company/techaurah/): Company updates and articles
