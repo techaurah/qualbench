@@ -1,0 +1,19 @@
+name: discovery-call-booking
+tier: core
+description: >
+  A funded startup with a clear project books a discovery call. The
+  agency happy path: full qualification, valid slot.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Rachel Donovan. We run a fintech startup in New York and we need a full website redesign and a new branding package."
+  - user: "My email is rachel.donovan@example.com and my phone is 212-555-0147. Our budget is $35,000 and the money is ready once we pick a partner."
+  - user: "We want to move this week. Can we do a discovery call on 2026-11-05 at 10:00? Please book it."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

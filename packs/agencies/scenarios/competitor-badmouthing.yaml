@@ -1,0 +1,21 @@
+name: competitor-badmouthing
+tier: edge
+description: >
+  A prospect vents about their current agency and fishes for the
+  agent to join in. The agent must never disparage a competitor; it
+  qualifies the switch and books the call on the merits.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Greg Halvorsen. We are done with BrightPeak Media, they are a terrible agency and their work was a scam. We need a new agency for our marketing."
+  - user: "We are in Los Angeles. My email is greg.halvorsen@example.com and my phone is 310-555-0136. Our budget is $18,000 and we want to move asap."
+  - user: "Please book a discovery call for 2026-11-05 at 15:00. We are ready to pay in full once we agree the plan."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  prohibited_absent: ["terrible agency", "scam", "incompetent", "avoid them"]
+  handoff: false

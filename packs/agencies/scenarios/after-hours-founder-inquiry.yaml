@@ -1,0 +1,20 @@
+name: after-hours-founder-inquiry
+tier: core
+description: >
+  A founder writes late at night with a board approved budget and a
+  real programme of work. Hot score, no booking ask: qualify fully
+  and let the team follow up in the morning.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, it is 11:15 pm, sorry for the late message. My name is Daniel Reyes, I founded a logistics software company in Toronto."
+  - user: "We need a demand generation campaign and a proper content engine. Our budget is $30,000, approved by our board, and the money is ready."
+  - user: "My email is daniel.reyes@example.com and my phone is 416-555-0125. I do not need a call tonight, just wanted to get this started this week."
+expected:
+  stage: QUALIFIED
+  score_band: [80, 100]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

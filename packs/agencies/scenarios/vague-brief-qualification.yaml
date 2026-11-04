@@ -1,0 +1,20 @@
+name: vague-brief-qualification
+tier: edge
+description: >
+  A vague someday inquiry with no urgency and a small maybe budget.
+  The agent captures the contact politely and parks the lead in
+  nurture instead of inflating it into a qualification.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, this is Olivia Bennett. We might need some marketing help at some point, I am just looking around for now."
+  - user: "We are a small consultancy in New York. My email is olivia.bennett@example.com and my phone is 646-555-0173."
+  - user: "Maybe a website someday, the budget could be $2,000 or so. No rush at all, just send me some information."
+expected:
+  stage: NURTURE
+  score_band: [50, 64]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

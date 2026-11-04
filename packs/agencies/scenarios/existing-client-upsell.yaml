@@ -1,0 +1,23 @@
+name: existing-client-upsell
+tier: core
+description: >
+  An existing client expands into an SEO and content retainer. The
+  CRM already holds their lead record; the agent books the planning
+  call on the strength of the existing relationship.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+  crm:
+    leads:
+      - {name: "Melissa Grant", email: "melissa.grant@example.com", company: "Brightpath Consulting", stage: "QUALIFIED"}
+turns:
+  - user: "Hi, this is Melissa Grant from Brightpath Consulting in Austin. We are existing clients, you built our website last year."
+  - user: "We want to add an SEO retainer and monthly content. Our budget is $3,500 a month. My email is melissa.grant@example.com and my phone is 512-555-0188."
+  - user: "Can we book a strategy call this month to plan it? 2026-11-10 at 13:00 works for me."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

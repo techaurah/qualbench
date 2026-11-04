@@ -1,0 +1,20 @@
+name: portfolio-request
+tier: core
+description: >
+  A qualified prospect wants proof before commitment: portfolio and
+  case studies first, call later. The agent captures everything and
+  qualifies without forcing a booking.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Steven Wright. We are a restaurant group in Houston thinking about a new website and online ordering."
+  - user: "Before we commit to anything, could you send us your portfolio and a couple of case studies? My email is steven.wright@example.com and my phone is 713-555-0122."
+  - user: "Our budget for the project would be around $15,000. If the work looks right we would want to start this month."
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

@@ -1,0 +1,19 @@
+name: budget-below-minimum
+tier: edge
+description: >
+  A real project with a budget far below any viable engagement. The
+  correct outcome is a polite unqualified: details captured, no call
+  booked, no discount invented to close the gap.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Ben Cole. We are a small bakery and we need a website with online ordering."
+  - user: "My email is ben.cole@example.com. Honestly our whole budget is $500, that is all we can spend on this."
+expected:
+  stage: UNQUALIFIED
+  score_band: [0, 49]
+  booking_made: false
+  fields_captured: [name, email]
+  handoff: false

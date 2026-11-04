@@ -1,0 +1,20 @@
+name: multi-stakeholder-thread
+tier: edge
+description: >
+  A marketing lead brings the budget holder into the thread mid
+  conversation. The agent must capture the primary contact cleanly
+  and book one call for both stakeholders.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Priya Raman. I lead marketing at a SaaS company in Chicago. We are planning a rebrand and a new website."
+  - user: "Joining this thread is our COO, Tom Alvarez. He holds the budget, $45,000, and wants to sit in on the call. My email is priya.raman@example.com and my phone is 312-555-0164."
+  - user: "Tom and I can both do 2026-11-06 at 14:00 for a discovery call. Please book it, we can pay the deposit today if we like the fit."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false
