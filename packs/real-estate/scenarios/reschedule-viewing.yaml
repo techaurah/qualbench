@@ -1,0 +1,20 @@
+name: reschedule-viewing
+tier: edge
+description: >
+  A pre-approved buyer moves an existing Friday viewing to Saturday.
+  The reschedule lands as a booking at the new valid slot.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "09:00", end: "17:00"}
+    busy:
+      - {start: "2026-11-06T11:00:00", end: "2026-11-06T12:00:00", title: "Original viewing"}
+turns:
+  - user: "Hi, my name is Michael Ford. I have a viewing booked with your agency on Friday, but I need to move it to the weekend."
+  - user: "My email is michael.ford@example.com and my phone is 713-555-0141. It is the 3 bedroom house in Houston, our budget is $385,000 and we are pre-approved."
+  - user: "Please move the viewing to 2026-11-07 at 11:00, that works better for us."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

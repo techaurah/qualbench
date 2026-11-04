@@ -1,0 +1,20 @@
+name: spanish-language-inquiry
+tier: edge
+description: >
+  A buyer writes entirely in Spanish, the largest non-English intake
+  language in the US market. The agent must still recognise the need,
+  capture the name and contacts, and qualify the lead warm.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hola, me llamo Carlos Mendez. Quiero comprar una casa en Austin, Texas, tenemos un presupuesto de $420,000."
+  - user: "Mi correo es carlos.mendez@example.com y mi telefono es 512-555-0139. Somos una familia y buscamos una casa grande para nosotros."
+  - user: "Podemos hablar esta semana sobre las opciones? Prefiero que me contacten por correo."
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

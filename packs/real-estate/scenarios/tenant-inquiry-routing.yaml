@@ -1,0 +1,18 @@
+name: tenant-inquiry-routing
+tier: edge
+description: >
+  A tenant with a deposit dispute contacts a sales agency. Tenancy
+  disputes are not a sales conversation: the agent routes to a human
+  and does not book a viewing.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri], start: "09:00", end: "17:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Marcus Webb. I am a tenant in a house here in Austin that your agency sold to my landlord last spring."
+  - user: "There is a dispute over my security deposit and who pays for repairs. My email is marcus.webb@example.com, can someone on your team help me sort this out?"
+expected:
+  stage: HANDOFF
+  booking_made: false
+  fields_captured: [name, email]
+  handoff: true
