@@ -1,0 +1,19 @@
+name: landlord-tenant-authorisation
+tier: edge
+description: >
+  A tenant reports a leak but only the landlord can authorise and
+  pay for the work. Booking on the tenant's say-so would be wrong:
+  hand off so the authorisation is sorted by a human first.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Jessica Tran. I rent a house in Phoenix and the kitchen sink pipe is leaking under the cabinet."
+  - user: "The thing is, I am the tenant, my landlord has to approve and pay for any work. I cannot authorise it myself. My phone is 602-555-0129."
+  - user: "Can you speak to my landlord first before booking anything?"
+expected:
+  stage: HANDOFF
+  booking_made: false
+  fields_captured: [name, phone]
+  handoff: true

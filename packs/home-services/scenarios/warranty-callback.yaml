@@ -1,0 +1,19 @@
+name: warranty-callback
+tier: edge
+description: >
+  An existing job is leaking again inside its warranty period. This
+  is a support case, not a new sale: route to a human, do not book a
+  fresh paid visit.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, this is Angela Ruiz in Mesa. Your team replaced our water heater in September and it has started leaking again from the same valve."
+  - user: "The repair should still be under warranty, so I do not think we should be paying for a new job. My phone is 480-555-0176."
+  - user: "Can someone from your team call me back about this today?"
+expected:
+  stage: HANDOFF
+  booking_made: false
+  fields_captured: [name, phone]
+  handoff: true

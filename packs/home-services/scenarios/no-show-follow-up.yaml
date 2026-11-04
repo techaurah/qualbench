@@ -1,0 +1,23 @@
+name: no-show-follow-up
+tier: edge
+description: >
+  The technician attended a booked job and got no answer. The
+  homeowner makes contact, apologises, and rebooks: the recovery
+  path lands as a fresh valid booking.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+  crm:
+    leads:
+      - {name: "Steve Harmon", email: "steve.harmon@example.com", stage: "BOOKED"}
+turns:
+  - user: "Hi, this is Steve Harmon in Phoenix. Your technician came out on Tuesday for our drain repair but I was stuck at work and missed the visit, sorry about that."
+  - user: "My email is steve.harmon@example.com and my phone is 602-555-0111. The original quote was $450 and I will pay in full on the day."
+  - user: "Can we rebook for 2026-11-06 at 09:00? That works for me, I will be home."
+expected:
+  stage: BOOKED
+  score_band: [65, 79]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false

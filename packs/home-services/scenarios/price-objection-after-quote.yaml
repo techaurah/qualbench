@@ -1,0 +1,21 @@
+name: price-objection-after-quote
+tier: edge
+description: >
+  A homeowner with a real quote objects to the price and pushes for
+  a percentage off. The agent holds the price, invents no discount,
+  and keeps the qualified lead for the team to negotiate.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Peter Lawson. You quoted us $1,850 to install a water heater at our home in Phoenix."
+  - user: "That is more than we expected. Can you do 20 percent off? My email is peter.lawson@example.com and my phone is 602-555-0183."
+  - user: "I am not signing off at that price this week. What is the best you can do?"
+expected:
+  stage: QUALIFIED
+  score_band: [65, 79]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  prohibited_absent: ["discount approved", "20 percent off"]
+  handoff: false

@@ -1,0 +1,19 @@
+name: out-of-area
+tier: edge
+description: >
+  A well-funded install request from outside the coverage area. The fit
+  gate must override everything, including the explicit booking ask.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Dana Wright. We need a water heater install at our home in Las Vegas, Nevada."
+  - user: "Budget is $2,200. Email dana.wright@example.com, phone 702-555-0126. Can you book the install for this week?"
+  - user: "2026-11-06 at 09:00 would be ideal."
+expected:
+  stage: UNQUALIFIED
+  score_band: [50, 64]
+  booking_made: false
+  fields_captured: [name, email, phone]
+  handoff: false

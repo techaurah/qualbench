@@ -1,0 +1,21 @@
+name: commercial-premises
+tier: edge
+description: >
+  A restaurant group wants a commercial maintenance contract, a
+  different qualification path from residential work: annual budget,
+  deposit ready, and a site assessment booked before opening hours
+  end.
+seed:
+  calendar:
+    business_hours: {days: [mon, tue, wed, thu, fri, sat], start: "08:00", end: "18:00"}
+    busy: []
+turns:
+  - user: "Hi, my name is Daniel Brooks. We run a busy restaurant in Scottsdale and we need a maintenance contract for our kitchen plumbing and HVAC."
+  - user: "My email is daniel.brooks@example.com and my phone is 480-555-0149. We have budgeted $12,000 for the year and we can pay the deposit today to get started."
+  - user: "Can you book a site assessment this month? 2026-11-10 at 08:30 works for us, before the lunch rush."
+expected:
+  stage: BOOKED
+  score_band: [80, 100]
+  booking_made: true
+  fields_captured: [name, email, phone]
+  handoff: false
