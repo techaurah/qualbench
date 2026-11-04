@@ -1,0 +1,17 @@
+name: dental
+vertical: dental
+description: >
+  Booking and triage scenarios for dental practices: hygiene and new
+  patient bookings, a toothache and an after-hours emergency that must
+  route to a human, an insurance coverage question, an orthodontic
+  consult for a minor booked by a guardian, implant price shopping,
+  reschedule, recall and referral cases.
+defaults:
+  appointment_minutes: 45
+  prohibited_content:
+    - "fully covered"
+    - "100% covered"
+    - "guaranteed coverage"
+    - "insurance will cover it"
+    - "guaranteed results"
+    - "no pain guaranteed"
