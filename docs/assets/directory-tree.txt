@@ -1,0 +1,45 @@
+qualbench/                              Outcome regression testing for qualification and booking agents
+|
+|-- src/qualbench/                      The package (PyYAML is the only runtime dependency)
+|   |-- cli.py                          Entry point: run and validate commands (qualbench script)
+|   |-- scenario.py                     Pack and YAML scenario loading and validation
+|   |-- runner.py                       Drives the agent, executes its tool calls against the mocks
+|   |-- assertions.py                   The six deterministic outcome checks
+|   |-- report.py                       Tier metrics, safety gate, Markdown reports, CI baselines
+|   |-- agents/                         Agent adapters behind one session protocol
+|   |   |-- base.py                     AgentSession protocol and payload/response contract
+|   |   |-- http_agent.py               OpenAI-compatible chat endpoint adapter
+|   |   `-- webhook_agent.py            Webhook protocol adapter and in-process Python agents
+|   `-- mocks/                          Test doubles the runner executes tool calls against
+|       |-- calendar.py                 FakeCalendar: business hours, busy blocks, bookings
+|       `-- crm.py                      FakeCRM: lead records, every write kept for verification
+|
+|-- packs/                              Scenario packs: data only, frozen as QualBench Benchmark v1.0
+|   |-- real-estate/                    pack.yaml + scenarios/ (10 scenarios)
+|   |-- med-spa/                        pack.yaml + scenarios/ (10 scenarios)
+|   |-- home-services/                  pack.yaml + scenarios/ (10 scenarios)
+|   |-- dental/                         pack.yaml + scenarios/ (10 scenarios)
+|   `-- agencies/                       pack.yaml + scenarios/ (10 scenarios)
+|
+|-- examples/                           Runnable agents, no credentials needed
+|   |-- reference-agent/                Complete agent implementing the protocol, passes 50/50
+|   `-- naive-agent/                    Deliberately careless agent, the 0/50 risk baseline
+|
+|-- tests/                              Pytest suite (57 tests): runner, assertions, mocks, agents, report
+|-- docs/                               scenario-format.md, assertions.md, ci.md
+|   `-- assets/                         Visual documentation: hero.png, architecture.svg,
+|                                       workflow.svg, repo-structure.svg, directory-tree.txt
+|-- scripts/                            build_results.py and build_leaderboard.py
+|-- results/                            Shipped Benchmark v1.0 results (reference and naive agents)
+|-- assets/                             benchmark-anatomy.svg, used by the README benchmark section
+|-- BENCHMARK.md                        Benchmark v1.0 method, safety gate, submission and governance
+|-- LEADERBOARD.md                      Public benchmark rankings
+|-- README.md                           Project overview, quickstart, FAQ
+|-- CONTRIBUTING.md                     How to contribute (scenario packs are the best first PR)
+|-- ROADMAP.md                          Now, next and later
+|-- CHANGELOG.md                        Release history
+|-- SECURITY.md                         Private vulnerability reporting route
+|-- AGENTS.md                           Guidance for AI coding agents working in this repo
+|-- llms.txt, llms-full.txt             Machine-readable project summaries for AI assistants
+|-- .github/workflows/ci.yml            CI: tests and lint on supported Python versions
+`-- pyproject.toml                      Packaging: qualbench CLI, Python 3.11+, MIT

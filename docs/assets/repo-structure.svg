@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="657" viewBox="0 0 1180 657" role="img" aria-label="QualBench repository structure">
+<rect width="1180" height="657" rx="18" fill="#0B1F3A"/>
+<text x="44" y="50" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#EAF6FF">Repository structure</text>
+<text x="44" y="86" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="700" fill="#00CEFF">qualbench/</text>
+<text x="44" y="115" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ src/qualbench/</text>
+<text x="430" y="115" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">the package (PyYAML is the only dependency)</text>
+<text x="44" y="144" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ cli.py</text>
+<text x="430" y="144" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">entry point: run and validate commands</text>
+<text x="44" y="173" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ scenario.py</text>
+<text x="430" y="173" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">loads packs and YAML scenarios</text>
+<text x="44" y="202" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ runner.py</text>
+<text x="430" y="202" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">drives the agent, executes its tool calls</text>
+<text x="44" y="231" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ assertions.py</text>
+<text x="430" y="231" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">six deterministic outcome checks</text>
+<text x="44" y="260" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ report.py</text>
+<text x="430" y="260" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">metrics, safety gate, reports, baselines</text>
+<text x="44" y="289" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   ├─ agents/</text>
+<text x="430" y="289" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">OpenAI, webhook and in-process adapters</text>
+<text x="44" y="318" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">│   └─ mocks/</text>
+<text x="430" y="318" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">FakeCalendar and FakeCRM</text>
+<text x="44" y="347" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ packs/</text>
+<text x="430" y="347" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">5 vertical packs, 50 scenarios, Benchmark v1.0</text>
+<text x="44" y="376" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ examples/</text>
+<text x="430" y="376" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">reference agent (50/50), naive agent (0/50)</text>
+<text x="44" y="405" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ tests/</text>
+<text x="430" y="405" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">pytest suite, 57 tests</text>
+<text x="44" y="434" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ docs/</text>
+<text x="430" y="434" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">scenario format, assertions, CI guide, assets</text>
+<text x="44" y="463" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ scripts/</text>
+<text x="430" y="463" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">build the results JSON and leaderboard</text>
+<text x="44" y="492" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ results/</text>
+<text x="430" y="492" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">shipped Benchmark v1.0 results</text>
+<text x="44" y="521" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ assets/</text>
+<text x="430" y="521" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">benchmark anatomy visual</text>
+<text x="44" y="550" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ BENCHMARK.md</text>
+<text x="430" y="550" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">method, safety gate, submission rules</text>
+<text x="44" y="579" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">├─ LEADERBOARD.md</text>
+<text x="430" y="579" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">public benchmark rankings</text>
+<text x="44" y="608" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="16" font-weight="400" fill="#EAF6FF">└─ pyproject.toml</text>
+<text x="430" y="608" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">packaging: qualbench CLI, Python 3.11+</text>
+</svg>

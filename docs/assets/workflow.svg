@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="520" viewBox="0 0 1240 520" role="img" aria-label="QualBench run lifecycle: load packs, seed mocks, drive the agent, execute tool calls, check assertions, report results">
+<rect width="1240" height="520" rx="18" fill="#0B1F3A"/>
+<text x="48" y="50" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#EAF6FF">One benchmark run, step by step</text>
+<text x="48" y="78" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#9DB8D2">The same lifecycle runs for a single pack or the full 50-scenario QualBench Benchmark v1.0.</text>
+<rect x="40" y="104" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="70" cy="136" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="70" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">1</text>
+<text x="96" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">LOAD</text>
+<text x="96" y="168" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">CLI collects the chosen packs</text>
+<text x="96" y="188" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">scenario.py parses pack.yaml</text>
+<text x="96" y="208" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">and every scenario YAML</text>
+<rect x="440" y="104" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="470" cy="136" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="470" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">2</text>
+<text x="496" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">SEED</text>
+<text x="496" y="168" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">runner seeds FakeCalendar and</text>
+<text x="496" y="188" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">FakeCRM from the scenario, then</text>
+<text x="496" y="208" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">starts a fresh agent session</text>
+<rect x="840" y="104" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="870" cy="136" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="870" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">3</text>
+<text x="896" y="142" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">DRIVE</text>
+<text x="896" y="168" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">each scripted user turn is sent</text>
+<text x="896" y="188" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">to the agent; its replies are</text>
+<text x="896" y="208" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">recorded in the transcript</text>
+<rect x="840" y="286" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="870" cy="318" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="870" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">4</text>
+<text x="896" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">EXECUTE TOOLS</text>
+<text x="896" y="350" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">the agent requests tool calls;</text>
+<text x="896" y="370" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">ToolExecutor runs them on the</text>
+<text x="896" y="390" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">mocks, max 8 rounds per turn</text>
+<rect x="440" y="286" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="470" cy="318" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="470" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">5</text>
+<text x="496" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">CHECK</text>
+<text x="496" y="350" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">six deterministic assertions</text>
+<text x="496" y="370" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">compare the collected outcome</text>
+<text x="496" y="390" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">with the expected block</text>
+<rect x="40" y="286" width="360" height="118" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<circle cx="70" cy="318" r="15" fill="none" stroke="#00CEFF" stroke-width="2"/>
+<text x="70" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#00CEFF" text-anchor="middle">6</text>
+<text x="96" y="324" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">REPORT</text>
+<text x="96" y="350" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">PASS or FAIL per scenario, tier</text>
+<text x="96" y="370" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">metrics and the safety gate;</text>
+<text x="96" y="390" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">report, JSON, baseline, exit code</text>
+<line x1="402" y1="163" x2="430" y2="163" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="430,163 419,157 419,169" fill="#00CEFF"/>
+<line x1="802" y1="163" x2="830" y2="163" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="830,163 819,157 819,169" fill="#00CEFF"/>
+<line x1="1020" y1="222" x2="1020" y2="278" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="1020,286 1014,275 1026,275" fill="#00CEFF"/>
+<line x1="830" y1="345" x2="810" y2="345" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="810,345 821,339 821,351" fill="#00CEFF"/>
+<line x1="430" y1="345" x2="410" y2="345" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="410,345 421,339 421,351" fill="#00CEFF"/>
+<rect x="40" y="430" width="1160" height="56" rx="10" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="64" y="455" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#EAF6FF">Steps 3 and 4 repeat for every user turn; steps 2 to 5 repeat for every scenario in the pack.</text>
+<text x="64" y="475" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#9DB8D2">Nothing is random and no wall clock is read, so the same agent gets the same verdict on every run.</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="680" viewBox="0 0 1240 680" role="img" aria-label="QualBench architecture: scenario packs load through the CLI into the runner, which drives the agent under test, executes its tool calls against mock calendar and CRM, then assertions and reporting grade the outcome">
+<rect width="1240" height="680" rx="18" fill="#0B1F3A"/>
+<text x="48" y="50" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#EAF6FF">QualBench architecture</text>
+<text x="48" y="78" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#9DB8D2">Deterministic outcome testing: YAML scenarios drive an agent through mock tools, and exact assertions grade what it did.</text>
+<rect x="40" y="100" width="280" height="190" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="62" y="136" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">SCENARIO PACKS · packs/</text>
+<text x="62" y="164" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">5 vertical packs, 50 scenarios</text>
+<text x="62" y="188" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">pack.yaml + scenarios/*.yaml</text>
+<text x="62" y="212" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">scripted user turns</text>
+<text x="62" y="236" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">seeded calendar and CRM state</text>
+<text x="62" y="260" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">expected business outcomes</text>
+<text x="62" y="284" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">tiers: core, edge, safety</text>
+<rect x="40" y="306" width="280" height="58" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="62" y="331" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#EAF6FF">scenario.py</text>
+<text x="62" y="352" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">loads and validates the YAML</text>
+<rect x="40" y="388" width="280" height="128" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="62" y="424" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#EAF6FF">EXAMPLE AGENTS · examples/</text>
+<text x="62" y="450" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#9DB8D2">reference-agent: complete agent,</text>
+<text x="62" y="471" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#9DB8D2">passes 50/50</text>
+<text x="62" y="492" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#9DB8D2">naive-agent: careless baseline,</text>
+<text x="62" y="513" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#9DB8D2">0/50 by design</text>
+<rect x="40" y="532" width="280" height="58" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="62" y="557" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" font-weight="700" fill="#EAF6FF">scripts/ + results/</text>
+<text x="62" y="578" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">build results JSON + leaderboard</text>
+<rect x="370" y="100" width="480" height="76" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="392" y="136" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#EAF6FF">CLI · cli.py, entry point: qualbench</text>
+<text x="392" y="164" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">run + validate · exit 0 pass, 1 fail, 2 regression</text>
+<rect x="370" y="200" width="480" height="248" rx="12" fill="#12294D" stroke="#00CEFF" stroke-width="2"/>
+<text x="392" y="236" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#00CEFF">RUNNER · runner.py</text>
+<text x="392" y="262" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">fresh agent session for every scenario</text>
+<text x="392" y="284" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">sends each scripted user turn to the agent</text>
+<text x="392" y="306" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">ToolExecutor executes the agent&#x27;s tool calls:</text>
+<rect x="392" y="322" width="210" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="403" y="340" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#EAF6FF">calendar.check_availability</text>
+<rect x="614" y="322" width="210" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="625" y="340" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#EAF6FF">calendar.book</text>
+<rect x="392" y="356" width="210" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="403" y="374" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#EAF6FF">crm.upsert_lead</text>
+<rect x="614" y="356" width="210" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="625" y="374" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#EAF6FF">crm.get_lead</text>
+<rect x="392" y="390" width="432" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="403" y="408" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#EAF6FF">report_outcome</text>
+<text x="392" y="434" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">max 8 tool rounds per turn; outcomes absorbed into the RunResult</text>
+<rect x="890" y="100" width="310" height="190" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="912" y="136" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" font-weight="700" fill="#EAF6FF">AGENT UNDER TEST · agents/</text>
+<text x="912" y="162" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">AgentSession protocol: start, send</text>
+<text x="912" y="185" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">OpenAI-compatible endpoint</text>
+<text x="912" y="208" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">webhook protocol adapter</text>
+<text x="912" y="231" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">Python file, in-process</text>
+<text x="912" y="254" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">bundled reference agent</text>
+<text x="912" y="277" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">requests tools, never runs them</text>
+<rect x="890" y="314" width="310" height="140" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="912" y="350" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" font-weight="700" fill="#EAF6FF">MOCKS · mocks/</text>
+<text x="912" y="376" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">FakeCalendar: business hours,</text>
+<text x="912" y="398" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">busy blocks, bookings, slot checks</text>
+<text x="912" y="420" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">FakeCRM: lead records, every</text>
+<text x="912" y="442" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">write kept for field checks</text>
+<rect x="370" y="472" width="480" height="140" rx="12" fill="#12294D" stroke="#00CEFF" stroke-width="2"/>
+<text x="392" y="506" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#00CEFF">ASSERTIONS · assertions.py</text>
+<rect x="392" y="520" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="461" y="538" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">stage equals</text>
+<rect x="538" y="520" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="607" y="538" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">score band</text>
+<rect x="684" y="520" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="753" y="538" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">booking + valid slot</text>
+<rect x="392" y="554" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="461" y="572" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">fields captured</text>
+<rect x="538" y="554" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="607" y="572" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">prohibited absent</text>
+<rect x="684" y="554" width="138" height="27" rx="7" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="753" y="572" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#EAF6FF" text-anchor="middle">handoff</text>
+<text x="392" y="596" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9DB8D2">exact checks only: equality, numeric bands, set membership, substring absence</text>
+<rect x="890" y="490" width="310" height="116" rx="12" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="912" y="526" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" font-weight="700" fill="#EAF6FF">REPORT · report.py</text>
+<text x="912" y="554" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">per-tier metrics + safety gate</text>
+<text x="912" y="578" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">Markdown report, results JSON</text>
+<text x="912" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">CI baseline: regressions exit 2</text>
+<line x1="180" y1="290" x2="180" y2="298" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="180,298 176,288 184,288" fill="#00CEFF"/>
+<line x1="320" y1="335" x2="362" y2="335" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="362,335 352,339 352,331" fill="#00CEFF"/>
+<line x1="610" y1="176" x2="610" y2="192" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="610,192 606,182 614,182" fill="#00CEFF"/>
+<line x1="850" y1="240" x2="882" y2="240" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="882,240 872,244 872,236" fill="#00CEFF"/>
+<polygon points="850,240 860,236 860,244" fill="#00CEFF"/>
+<line x1="852" y1="385" x2="884" y2="385" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="884,385 874,389 874,381" fill="#00CEFF"/>
+<text x="868" y="373" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#00CEFF" text-anchor="middle">tools</text>
+<line x1="610" y1="448" x2="610" y2="464" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="610,464 606,454 614,454" fill="#00CEFF"/>
+<text x="652" y="461" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#00CEFF" text-anchor="middle">RunResult</text>
+<line x1="850" y1="542" x2="882" y2="542" stroke="#00CEFF" stroke-width="2.5"/>
+<polygon points="882,542 872,546 872,538" fill="#00CEFF"/>
+<text x="48" y="656" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">Only runtime dependency: PyYAML. HTTP adapters use the standard library. No LLM judge anywhere, by design.</text>
+</svg>
