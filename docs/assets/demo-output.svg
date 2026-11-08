@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="600" viewBox="0 0 1240 600" role="img" aria-label="QualBench Benchmark v1.0 measured results: reference agent passes 50 of 50 scenarios and the safety gate; naive agent passes 0 of 50 and is gate blocked">
+<rect width="1240" height="600" rx="18" fill="#0B1F3A"/>
+<text x="48" y="54" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#EAF6FF">QualBench Benchmark v1.0 results</text>
+<text x="48" y="82" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#9DB8D2">Measured, not illustrated: 50 scenarios in 5 packs, deterministic assertions, no LLM judge. Suite run 2026-11-04.</text>
+<rect x="48" y="104" width="1144" height="304" rx="10" fill="#12294D" stroke="#2A5A8F" stroke-width="1.5"/>
+<text x="70" y="129" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14" font-weight="700" fill="#EAF6FF">Metric</text>
+<text x="622" y="129" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14" font-weight="700" fill="#00CEFF">reference-agent</text>
+<text x="942" y="129" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14" font-weight="700" fill="#9DB8D2">naive-agent</text>
+<line x1="48" y1="142" x2="1192" y2="142" stroke="#00CEFF" stroke-width="1.5"/>
+<text x="70" y="167" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Scenarios passed</text>
+<text x="622" y="167" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">50/50</text>
+<text x="942" y="167" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">0/50</text>
+<line x1="48" y1="180" x2="1192" y2="180" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="205" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Outcome pass rate</text>
+<text x="622" y="205" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">100.0%</text>
+<text x="942" y="205" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">0.0%</text>
+<line x1="48" y1="218" x2="1192" y2="218" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="243" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Safety scenarios</text>
+<text x="622" y="243" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">9/9</text>
+<text x="942" y="243" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">0/9</text>
+<line x1="48" y1="256" x2="1192" y2="256" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="281" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Safety gate</text>
+<text x="622" y="281" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#00CEFF">PASSED</text>
+<text x="942" y="281" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#FF8A7A">BLOCKED</text>
+<line x1="48" y1="294" x2="1192" y2="294" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="319" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Booking accuracy</text>
+<text x="622" y="319" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">100.0%</text>
+<text x="942" y="319" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">94.0%</text>
+<line x1="48" y1="332" x2="1192" y2="332" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="357" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Handoff correctness</text>
+<text x="622" y="357" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">100.0%</text>
+<text x="942" y="357" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">80.0%</text>
+<line x1="48" y1="370" x2="1192" y2="370" stroke="#2A5A8F" stroke-width="0.75"/>
+<text x="70" y="395" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#EAF6FF">Field capture</text>
+<text x="622" y="395" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#EAF6FF">100.0%</text>
+<text x="942" y="395" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="14.5" font-weight="700" fill="#9DB8D2">37.4%</text>
+<rect x="48" y="426" width="1144" height="38" rx="8" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="70" y="450" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#EAF6FF">By tier, reference vs naive:  Core 15/15 vs 0/15  ·  Edge 26/26 vs 0/26  ·  Safety 9/9 vs 0/9</text>
+<rect x="48" y="476" width="1144" height="38" rx="8" fill="#0E2A4F" stroke="#2A5A8F"/>
+<text x="70" y="500" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#EAF6FF">By pack, reference: agencies 10/10 · dental 10/10 · home-services 10/10 · med-spa 10/10 · real-estate 10/10 · naive: 0/10 in every pack</text>
+<text x="48" y="548" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9DB8D2">The naive agent still books at 94.0% accuracy, yet passes nothing: weak field capture (37.4%) and 0 of 9 safety scenarios trip the gate.</text>
+<text x="48" y="574" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" fill="#9DB8D2">Source: results/reference-agent.json and results/naive-agent.json in this repo. Full board: LEADERBOARD.md.</text>
+</svg>
