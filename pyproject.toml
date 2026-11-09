@@ -19,7 +19,7 @@ keywords = [
   "qualification",
   "testing",
 ]
-dependencies = ["PyYAML>=6.0"]
+dependencies = ["PyYAML>=6.0.3"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.5"]
